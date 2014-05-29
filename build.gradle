@@ -1,0 +1,22 @@
+apply plugin: 'cpp'
+
+executables {
+   hello {}
+}
+
+sources {
+    hello {
+      cpp {
+        source {
+            srcDir "src"
+          }
+        }
+    }
+}
+
+
+
+task run(type: Exec) {
+  executable "build/binaries/helloExecutable/hello"
+  args ""
+}
